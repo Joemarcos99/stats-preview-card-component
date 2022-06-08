@@ -1,0 +1,115 @@
+/*
+Author: Joe Marcotte
+Preview Card Component
+Date: 6/7/2022
+*/
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Libre+Baskerville&family=Red+Hat+Display:wght@500&display=swap");
+:root {
+  --Very-dark-blue: hsl(233, 47%, 7%);
+  --Dark-desaturated-blue: hsl(244, 38%, 16%);
+  --Soft-violet: hsl(277, 64%, 61%);
+  --White: hsl(0, 0%, 100%);
+  --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.main-container {
+  background-color: var(--Very-dark-blue);
+  padding: 5em 0;
+  width: 100%;
+}
+.content-container {
+  background-color: var(--Dark-desaturated-blue);
+  height: auto;
+  width: 80vw;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+.img {
+  background: var(--Soft-violet);
+  height: 13em;
+  border-radius: 1rem 1rem 0 0;
+}
+.img img {
+  opacity: 0.4;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+h1 {
+  color: var(--White);
+}
+p {
+  color: var(--Slightly-transparent-white);
+  font-family: "Red Hat Display", sans-serif;
+}
+.insights {
+  color: var(--Soft-violet);
+}
+.txt {
+  padding: 1rem 0.5rem;
+  margin: 0 2em;
+}
+
+.stats {
+  display: grid;
+  row-gap: 0.5rem;
+  padding-bottom: 2em;
+}
+
+/*
+media query for desktop design
+*/
+@media (min-width: 850px) {
+  .main-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  .content-container {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 25em;
+    width: 80vw;
+  }
+  .stats {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+  }
+  .img {
+    height: 100%;
+    width: 100%;
+    border-radius: 0 1rem 1rem 0;
+  }
+
+  .img img {
+    max-width: 100%;
+    height: 25em;
+    border-radius: 0 1rem 1rem 0;
+  }
+  .content-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
